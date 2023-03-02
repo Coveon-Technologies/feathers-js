@@ -1,0 +1,51 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "./public/",
+  "origins": [
+    "http://localhost:3030"
+  ],
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "postgresql": {
+    "client": "pg",
+    "connection": "postgres://postgres:postgres@localhost:5432/norm-db"
+  },
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "hfV2p88JwgYNDgfwoJ5+8+JC1KBW/vKz",
+    "authStrategies": [
+      "jwt",
+      "local"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "oauth": {
+      "google": {
+        "key": "<Client ID>",
+        "secret": "<Client secret>"
+      },
+      "facebook": {
+        "key": "<Client ID>",
+        "secret": "<Client secret>"
+      },
+      "auth0": {
+        "key": "<Client ID>",
+        "secret": "<Client secret>"
+      }
+    }
+  }
+}
