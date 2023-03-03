@@ -1,6 +1,6 @@
 # norm-rx
 
-A API with feathres.js for login and user creation
+API with feathres.js for login and user and cotracts database. 
 
 It uses postgres database
 
