@@ -6,6 +6,10 @@ export async function up(knex) {
     table.string('googleId')
     table.string('facebookId')
     table.string('auth0Id')
+    table.string('role')
+    table.string('active')
+    table.timestamp('created_at').defaultTo(knex.fn.now())
+    table.timestamp('updated_at').defaultTo(knex.fn.now())
   })
 }
 
